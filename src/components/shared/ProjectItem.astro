@@ -25,7 +25,7 @@ const refImage = item.title.toLowerCase().replace(/\s+/g, "-");
   <div class="mt-4">
     <img
       x-ref={refImage}
-      src={item.images[0]}
+      src={import.meta.env.BASE_URL + item.images[0]}
       alt={item.title}
       class="w-full rounded-lg"
     />
@@ -34,10 +34,14 @@ const refImage = item.title.toLowerCase().replace(/\s+/g, "-");
     {
       item.images.map((image) => (
         <button
-          @click={`$refs.${refImage}.setAttribute('src', '${image}')`}
+          @click={`$refs.${refImage}.setAttribute('src', '${import.meta.env.BASE_URL}${image}')`}
           type="button"
         >
-          <img src={image} alt={item.title} class="w-full rounded-lg" />
+          <img
+            src={import.meta.env.BASE_URL + image}
+            alt={item.title}
+            class="w-full rounded-lg"
+          />
         </button>
       ))
     }
