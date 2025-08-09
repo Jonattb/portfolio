@@ -1,0 +1,44 @@
+---
+import "./../../styles/terminal.css";
+---
+
+<div
+  class="terminal-loader flex"
+  x-data="{ textIndex: 1 }"
+  x-init="setInterval(() => {
+    textIndex = textIndex >= 3 ? 1 : textIndex + 1
+  }, 8050)"
+>
+  <div class="terminal-header">
+    <div class="terminal-title">Terminal</div>
+    <div class="terminal-controls">
+      <div class="control close"></div>
+      <div class="control minimize"></div>
+      <div class="control maximize"></div>
+    </div>
+  </div>
+  <div x-cloak x-show="textIndex == 1">
+    <div
+      class="text"
+      :style="`animation: typeAndDelete 8s steps(20) infinite, blinkCursor 0.5s step-end infinite alternate;`"
+    >
+      rails new example-app
+    </div>
+  </div>
+  <div x-cloak x-show="textIndex == 2">
+    <div
+      class="text"
+      :style="`animation: typeAndDelete 8s steps(26) infinite, blinkCursor 0.5s step-end infinite alternate;`"
+    >
+      npx create-next-app@latest
+    </div>
+  </div>
+  <div x-cloak x-show="textIndex == 3">
+    <div
+      class="text"
+      :style="`animation: typeAndDelete 8s steps(20) infinite, blinkCursor 0.5s step-end infinite alternate;`"
+    >
+      laravel new example-app
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+---
+import ProjectItem from "./shared/ProjectItem.astro";
+---
+
+<section
+  id="projects"
+  class="relative w-full overflow-hidden py-30 md:items-center flex"
+>
+  <div class="max-container w-full">
+    <div class="w-full max-w-2xl">
+      <h2 class="text-5xl w-full font-bungee font-bold">Proyectos</h2>
+      <p class="text-lg mt-2">
+        Aquí puedes encontrar una selección de mis proyectos más destacados.
+        Cada uno refleja mi enfoque en la calidad, la funcionalidad y la
+        experiencia del usuario. Estoy siempre abierto a nuevos desafíos y
+        oportunidades para aprender y crecer como desarrollador.
+      </p>
+    </div>
+    <div class="mt-12 border-t border-base-content pt-12 flex flex-col gap-24">
+      <ProjectItem
+        item={{
+          projectNumber: "01",
+          title: "Palmetto",
+          link: "https://palmetto.truckingplaza.us/sign_up",
+          description:
+            "Truck Parking Area & Service Area - Plataforma desarrollada con Ruby on Rails, Tailwind y AlpineJS para ofrecer estacionamiento seguro y disponible 24/7 para camiones.",
+          images: [
+            "/images/palmetto/1.png",
+            "/images/palmetto/2.png",
+            "/images/palmetto/3.png",
+            "/images/palmetto/4.png",
+          ],
+        }}
+      />
+      <ProjectItem
+        item={{
+          projectNumber: "02",
+          title: "TataLogistic",
+          description:
+            "Tata Logistic - Aplicación web desarrollada para la gestión financiera de artistas, permitiendo registrar y controlar ingresos y gastos de manera sencilla y organizada. Ofrece reportes claros, seguimiento de pagos, y herramientas para optimizar la administración económica de cantantes y su equipo de trabajo.",
+          images: [
+            "/images/tatalogistic/1.png",
+            "/images/tatalogistic/2.png",
+            "/images/tatalogistic/3.png",
+            "/images/tatalogistic/4.png",
+          ],
+        }}
+      />
+      <ProjectItem
+        item={{
+          projectNumber: "03",
+          title: "CRMDental",
+          description:
+            "CRM Dental - Plataforma integral para clínicas dentales que centraliza la gestión de citas, comunicación con pacientes, control de horarios y administración del personal. Incluye herramientas para seguimiento de tratamientos, envío de recordatorios y optimización de la agenda, mejorando la eficiencia y la experiencia del paciente.",
+          images: [
+            "/images/crmdental/1.png",
+            "/images/crmdental/2.png",
+            "/images/crmdental/3.png",
+            "/images/crmdental/4.png",
+          ],
+        }}
+      />
+      <ProjectItem
+        item={{
+          projectNumber: "04",
+          title: "Juuno",
+          description:
+            "Juuno - Plataforma para artistas que permite subir y distribuir sus pistas musicales a servicios de streaming como YouTube, SoundCloud, Spotify y más. Ofrece un panel de control para monitorear en tiempo real las reproducciones y ganancias generadas en cada plataforma, facilitando la gestión y el análisis de su rendimiento musical.",
+          images: [
+            "/images/juuno/1.png",
+            "/images/juuno/2.png",
+            "/images/juuno/3.png",
+            "/images/juuno/4.png",
+          ],
+        }}
+      />
+      <ProjectItem
+        item={{
+          projectNumber: "05",
+          title: "Palkko",
+          description:
+            "Palkko - Plataforma de delivery para eventos que permite a los asistentes realizar pedidos y recibirlos directamente en su ubicación. Incluye un sistema de gestión para que los comercios administren su inventario, publiquen ofertas, promociones y controlen sus ventas en tiempo real.",
+          images: [
+            "/images/palkko/1.png",
+            "/images/palkko/2.png",
+            "/images/palkko/3.png",
+            "/images/palkko/4.png",
+          ],
+        }}
+      />
+      <ProjectItem
+        item={{
+          projectNumber: "06",
+          title: "Busora",
+          link: "https://busora.com/",
+          description:
+            "Busora - Plataforma en fase de desarrollo que conecta talento con empresas, permitiendo a los profesionales mostrar su perfil completo, incluyendo experiencia, habilidades, proyectos, contribuciones y progreso. Facilita el descubrimiento de perfiles relevantes y la generación de oportunidades de contacto y colaboración sin estar enfocada exclusivamente en la contratación directa.",
+          images: [
+            "/images/busora/1.png",
+            "/images/busora/2.png",
+            "/images/busora/3.png",
+            "/images/busora/4.png",
+          ],
+        }}
+      />
+    </div>
+  </div>
+</section>

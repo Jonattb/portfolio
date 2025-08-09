@@ -1,0 +1,64 @@
+---
+import SkillItem from "./shared/SkillItem.astro";
+
+import AstroIcon from "../assets/images/skills/astro.svg";
+import AlpinejsIcon from "../assets/images/skills/alpinejs.svg";
+import BootstrapIcon from "../assets/images/skills/bootstrap.svg";
+import ExpressIcon from "../assets/images/skills/express.svg";
+import JavaScriptIcon from "../assets/images/skills/javascript.svg";
+import LaravelIcon from "../assets/images/skills/laravel.svg";
+import NuxtIcon from "../assets/images/skills/nuxt.svg";
+import PostgreIcon from "../assets/images/skills/postgresql.svg";
+import RailsIcon from "../assets/images/skills/rails.svg";
+import ReactIcon from "../assets/images/skills/react.svg";
+import TailwindIcon from "../assets/images/skills/tailwind.svg";
+import VueIcon from "../assets/images/skills/vue.svg";
+import CssIcon from "../assets/images/skills/css.svg";
+import PythonIcon from "../assets/images/skills/python.svg";
+import HtmlIcon from "../assets/images/skills/html.svg";
+import BrowseStackIcon from "../assets/images/skills/browserstack.svg";
+
+const icons = [
+  { title: "Astro", icon: AstroIcon },
+  { title: "Alpine.js", icon: AlpinejsIcon },
+  { title: "Bootstrap", icon: BootstrapIcon },
+  { title: "Express", icon: ExpressIcon },
+  { title: "JavaScript", icon: JavaScriptIcon },
+  { title: "Laravel", icon: LaravelIcon },
+  { title: "Nuxt", icon: NuxtIcon },
+  { title: "PostgreSQL", icon: PostgreIcon },
+  { title: "Rails", icon: RailsIcon },
+  { title: "React", icon: ReactIcon },
+  { title: "Tailwind CSS", icon: TailwindIcon },
+  { title: "Vue.js", icon: VueIcon },
+  { title: "CSS", icon: CssIcon },
+  { title: "Python", icon: PythonIcon },
+  { title: "HTML", icon: HtmlIcon },
+  { title: "BrowseStack", icon: BrowseStackIcon },
+];
+---
+
+<section
+  id="skills"
+  class="relative w-full bg-base-300 overflow-hidden h-[80vh] py-10 md:items-center flex"
+>
+  <div
+    class="max-container overflow-hidden w-full flex justify-between items-center relative p-10 gap-12 lg:gap-24 flex-col lg:flex-row text-base-content"
+  >
+    <div class="w-full lg:w-1/2">
+      <h2 class="text-5xl w-full font-bungee font-bold">Skills</h2>
+      <p class="text-lg mt-2">
+        Mis principales habilidades incluyen el desarrollo web, la programación
+        en lenguajes como JavaScript, Ruby on Rails, así como el uso de
+        frameworks como React, Vue y Alpinejs. Tambien he tenido experiencia con
+        bases de datos como PostgreSQL y MongoDB, y herramientas de control de
+        versiones como Git.
+      </p>
+    </div>
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <div class="grid grid-cols-4 gap-10 md:gap-16">
+        {icons.map((skill) => <SkillItem skill={skill} />)}
+      </div>
+    </div>
+  </div>
+</section>

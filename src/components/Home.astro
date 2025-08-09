@@ -1,0 +1,48 @@
+---
+import RubyIcon from "./../assets/images/ruby.svg";
+import LogoIcon from "./../assets/images/logo.svg";
+import ScrollDownIcon from "./../assets/images/scroll-down.svg";
+
+import Terminal from "./shared/Terminal.astro";
+---
+
+<section id="home" class="w-full h-screen relative">
+  <div
+    class="flex items-center justify-center absolute top-0 left-0 w-full h-full to-transparent z-20"
+  >
+    <LogoIcon class="size-full text-base-content/10" />
+  </div>
+
+  <div
+    class="max-container w-full flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-center h-full relative z-30"
+  >
+    <div class="w-full lg:w-1/2 relative z-10">
+      <h6 class="text-lg lg:text-4xl font-bungee uppercase font-semibold">
+        Soy Jona, un
+      </h6>
+      <h1 class="text-4xl lg:text-8xl font-bungee uppercase font-bold">
+        <div>Programador</div>
+        <div class="flex items-center gap-2">
+          <span>FullStack</span>
+          <RubyIcon class="size-[35px] sm:size-[96px] inline-block" />
+        </div>
+      </h1>
+      <h2 class="text-2xl lg:text-5xl font-bungee uppercase font-semibold mb-2">
+        Minimalista y creativo
+      </h2>
+      <p class="text-lg">
+        Me apasiona crear experiencias digitales únicas y funcionales. Con
+        experiencia en desarrollo web. Siempre estoy buscando aprender y mejorar
+        mis habilidades.
+      </p>
+    </div>
+    <div class="w-full lg:w-1/2 flex z-10 relative">
+      <Terminal />
+    </div>
+  </div>
+  <div class="absolute inset-x-0 bottom-10 flex items-center justify-center">
+    <span class="animate-bounce">
+      <ScrollDownIcon class="size-12 fill-current" />
+    </span>
+  </div>
+</section>

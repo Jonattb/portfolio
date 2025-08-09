@@ -1,0 +1,37 @@
+---
+import GithubIcon from "./../../assets/images/github.svg";
+import LinkedinIcon from "./../../assets/images/linkedin.svg";
+import LogoIcon from "./../../assets/images/logo.svg";
+---
+
+<div
+  class="fixed top-0 left-0 w-full z-50 py-6 transition-all duration-600 ease-in-out"
+  x-data=""
+  x-init="window.addEventListener('scroll', () => {
+    $el.classList.toggle('bg-base-100', window.scrollY > 100);
+  })"
+>
+  <div class="max-container flex justify-between items-center">
+    <div title="Jonathan Barrios">
+      <LogoIcon class="size-20" />
+    </div>
+    <div class="flex items-center gap-4 md:gap-6">
+      <a
+        href="https://github.com/Jonattb"
+        class="transition ease-linear hover:scale-105"
+      >
+        <GithubIcon
+          class="size-8 lg:size-12 inline-block hover:scale-105 transition-all ease-linear duration-200"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/jonathan-barrios-442b82367"
+        class="transition ease-linear hover:scale-105"
+      >
+        <LinkedinIcon
+          class="size-8 lg:size-12 inline-block hover:scale-105 transition-all ease-linear duration-200"
+        />
+      </a>
+    </div>
+  </div>
+</div>

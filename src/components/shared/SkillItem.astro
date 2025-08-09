@@ -1,0 +1,10 @@
+---
+const { skill } = Astro.props;
+---
+
+<div class="relative group" title={skill.title}>
+  <skill.icon
+    class="size-8 md:size-14 transition-transform duration-300 ease-in-out group-hover:scale-120"
+    alt={skill.title}
+  />
+</div>

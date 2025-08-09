@@ -1,0 +1,45 @@
+---
+import LinkExternalIcon from "./../../assets/images/link-external.svg";
+const item = Astro.props.item;
+const refImage = item.title.toLowerCase().replace(/\s+/g, "-");
+---
+
+<div>
+  <div class="w-full lg:w-1/2">
+    <div class="flex items-center gap-2 mb-1 font-bungee text-2xl">
+      <u>{item.projectNumber}</u>
+      <h4>{item.title}</h4>
+      {
+        item.link && (
+          <a href={item.link} target="_blank">
+            <span class="sr-only">Visitar sitio web</span>
+            <LinkExternalIcon class="size-6 fill-current" />
+          </a>
+        )
+      }
+    </div>
+    <p>
+      {item.description}
+    </p>
+  </div>
+  <div class="mt-4">
+    <img
+      x-ref={refImage}
+      src={item.images[0]}
+      alt={item.title}
+      class="w-full rounded-lg"
+    />
+  </div>
+  <div class="grid grid-cols-4 gap-4 mt-4">
+    {
+      item.images.map((image) => (
+        <button
+          @click={`$refs.${refImage}.setAttribute('src', '${image}')`}
+          type="button"
+        >
+          <img src={image} alt={item.title} class="w-full rounded-lg" />
+        </button>
+      ))
+    }
+  </div>
+</div>

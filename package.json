@@ -9,6 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.8"
+    "@alpinejs/intersect": "^3.14.9",
+    "@astrojs/alpinejs": "^0.4.8",
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.12.8",
+    "motion": "^12.23.12",
+    "tailwindcss": "^4.1.11",
+    "vanilla-marquee": "^1.1.2"
   }
 }

@@ -1,0 +1,49 @@
+---
+import LogoIcon from "./../assets/images/logo.svg";
+import Ghost from "./shared/Ghost.astro";
+import TelegramIcon from "./../assets/images/telegram.svg";
+import LinkedinIcon from "./../assets/images/linkedin.svg";
+---
+
+<section id="home" class="w-full bg-white text-black h-screen relative">
+  <div
+    class="flex items-center justify-center absolute top-0 left-0 w-full h-full to-transparent z-20"
+  >
+    <LogoIcon class="size-full text-base-content/10" />
+  </div>
+
+  <div
+    class="max-container w-full flex flex-col lg:flex-row gap-12 lg:gap-24 items-center justify-center h-full relative z-30"
+  >
+    <div class="w-full lg:w-1/2 relative z-10">
+      <div class="w-full max-w-2xl">
+        <h2 class="text-5xl w-full font-bungee font-bold">Contacto</h2>
+        <p class="text-lg mt-2">
+          Si deseas ponerte en contacto conmigo, no dudes en enviarme un mensaje
+          por LinkedIn o Telegram.
+        </p>
+      </div>
+      <div class="flex items-center gap-4 md:gap-6 mt-5">
+        <a
+          href="https://www.linkedin.com/in/jonathan-barrios-442b82367"
+          class="transition ease-linear hover:scale-105"
+        >
+          <LinkedinIcon
+            class="size-12 inline-block hover:scale-105 transition-all ease-linear duration-200"
+          />
+        </a>
+        <a
+          href="https://t.me/jonattb"
+          class="transition ease-linear hover:scale-105"
+        >
+          <TelegramIcon
+            class="size-12 inline-block hover:scale-105 transition-all ease-linear duration-200"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="w-full lg:w-1/2 relative z-10 flex justify-center">
+      <Ghost />
+    </div>
+  </div>
+</section>

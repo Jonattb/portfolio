@@ -1,0 +1,51 @@
+.marquee {
+  --gap: 5rem;
+  position: relative;
+  display: flex;
+	flex-direction: column;
+	gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+	flex-direction: column;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100%));
+  }
+}
+
+@keyframes scroll-reverse {
+  from {
+		transform: translateY(calc(0));
+  }
+  to {
+		transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: pauased !important;
+  }
+}
+
+.marquee__content {
+  animation: scroll 60s linear infinite;
+}
+
+.marquee--reverse .marquee__content {
+  animation: scroll-reverse 60s linear infinite !important;
+}
+
+.marquee:hover .marquee__content {
+	animation-play-state: paused;
+}
